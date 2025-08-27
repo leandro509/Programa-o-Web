@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina 3</title>
+</head>
+
+<body>
+    <h3>Página 3</h3>
+    <p>
+        <a href="pagina2.html">Página 2</a>
+    </p>
+    <p>
+    <form action="#" method="get">
+        <label for="login">Login: </label>
+        <input type="text" name="login" id="login" required autofocus minlength="5" maxlength="15">
+        <label for="senha">Senha: </label>
+        <input type="password" name="senha" id="senha" required minlength="5" maxlength="15">
+        <br><input type="text" name="endereco" placeholder="Informe seu endereço" minlength="10" maxlength="100"
+            size="50">
+        <br>
+        <label for="idade">Idade: </label>
+        <input type="number" name="idade" id="idade" min="18" max="100">
+        <br>
+        <input type="text" name="campo1" value="campo1" readonly>
+        <input type="text" name="campo2" value="campo2" disabled>
+        <input type="hidden" name="campo3" value="campo3">
+        <br>
+        <input type="date" name="data1" >
+        <input type="datetime-local" name="data2">
+        <input type="time" name="data3">
+        <input type="month" name="data4">
+        <input type="week" name="data5">
+        <br>
+        <label for="campoCb">Continuar conectado: </label>
+        <input type="checkbox" name="campoCb" id="campoCb" value="s" checked>
+        <br>
+        <label for="cidade1">Blumenau: </label>
+        <input type="radio" name="cidade" id="cidade1" value="BNU" checked>
+        <label for="cidade2">Gaspar: </label>
+        <input type="radio" name="cidade" id="cidade2" value="GSP">
+        <label for="cidade3">Indaial: </label>
+        <input type="radio" name="cidade" id="cidade3" value="IND">
+        <br>
+        <label for="estadp">Estado: </label>
+        <select name="estado" id="estado">
+            <option value="PR">Paraná</option>
+            <option value="SC" selected>Santa Catarina</option>
+            <option value="RS">Rio Grande do Sul</option>
+        </select>
+        <br>
+        <input type="email" name="email">
+        <input type="url" name="url">
+        <p>
+        <label for="arquivo">Informe o arquivo: </label>
+        <input type="file" name="arquivo" id="arquivo">
+        </p>
+        <textarea name="paragrafo" cols="50" rows="10" id="">
+            Valor padrão
+        </textarea>
+        <input type="tel" name="telefone" pattern="[0-9]{2} [0-9]{5} [0-9]{4}">
+        <input type="text" name="telefon2" pattern="[0-9]{2} [0-9]{5} [0-9]{4}">
+        <br><input type="submit" value="Enviar"> <input type="reset" value="Limpar">
+    </form>
+    </p>
+</body>
+
+</html>
