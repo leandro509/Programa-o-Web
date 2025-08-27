@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        li {
+            color : blue !important;
+            background-color: yellow;
+        }
+    </style>
+    <link rel="stylesheet" href="css/estilo.css ">
+    <title>Página nova</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+</head>
+<body>
+    <header class="fascinate-regular">
+        Cabeçalho da página
+    </header>
+    <nav>
+        <!--Barra de menu-->
+        <span class="material-symbols-outlined">menu</span> 
+    </nav>
+    <main>
+        <div class="tamanho_fonte">
+            Área principal da página
+        </div>
+        <section id="margem_espaco">
+            <table>
+                <tr>
+                    <th>Coluna 1</th>
+                    <th>Coluna 2</th>
+                    <th>Coluna 3</th>
+                </tr>
+                <tr>
+                    <td style="font-family: 'Courier New', Courier, monospace; background-color: aqua;">Col1 Lin1</td>
+                    <td>Col2 Lin1</td>
+                    <td>Col3 Lin1</td>
+                </tr>
+                <tr>
+                    <td>Col1 Lin2</td>
+                    <td>Col2 Lin2</td>
+                    <td>Col3 Lin2</td>
+                </tr>
+                <tr>
+                    <td>Col1 Lin3</td>
+                    <td>Col2 Lin3</td>
+                    <td class="tamanho_fonte">Col3 Lin3</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Col1-2 Lin4</td> 
+                    <td rowspan="2">Col3 Lin4-5</td>
+                </tr>
+                <tr>
+                    <td>Col1 Lin5</td>
+                    <td>Col2 Lin5</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <ul>
+                <li style="color: brown;">Opção 1</li>
+                <li>Opção 2
+                    <ul>
+                        <li>Opção 2.1</li>
+                        <li>Opção 2.2</li>
+                    </ul>
+                </li>
+                <li>Opção 3
+                    <ol>
+                        <li>Opção 3.1</li>
+                        <li>Opção 3.2</li>
+                    </ol>
+                </li>
+            </ul>
+            <ol>
+                <li>Opção 1
+                    <ol class="tamanho_fonte">
+                        <li>Opção 1.1</li>
+                        <li>Opção 1.2</li>
+                    </ol>
+                </li>
+                <li>Opção 2</li>
+                <li>Opção 3
+                    <ul>
+                        <li>Opção 3.1</li>
+                        <li>Opção 3.2</li>
+                    </ul>
+                </li>
+            </ol>
+
+        </section>
+        <section style="overflow: auto;">
+            <img src="imagens/imagem1.jpg" alt="Imagem com o por do sol e uma garota segurando a câmera!" >
+        </section>
+    </main>
+    <footer>
+        Rodapé da página
+    </footer>
+</body>
+</html>

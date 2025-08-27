@@ -1,0 +1,64 @@
+@font-face {
+    font-family: "MinhaFonte";
+    font-style: normal;
+    font-weight: 400;
+    src: url('../css/font/Festive-Regular.ttf');
+}
+table {
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-collapse: collapse;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+td, th {
+    border : 1px solid black;
+    padding: 10px;
+}
+
+li {
+    color : red;
+}
+#margem_espaco {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.tamanho_fonte {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.fascinate-regular {
+  font-family: "Fascinate", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+    text-align: center;
+    font-size: 1.5em;
+    padding: 10px;
+    background-color: skyblue;
+}
+footer {
+    font-family: 'MinhaFonte';
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
