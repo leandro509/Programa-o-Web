@@ -1,0 +1,46 @@
+nav {
+    background-color: aqua;
+    padding: 10px;
+
+}
+
+menu {
+    margin: 0;
+    padding: 0;
+}
+
+menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+menu a {
+    text-decoration: none;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+menu a:hover {
+    text-decoration: underline;
+}
+
+.menu_principal > li {
+    display: inline-block;
+    padding-right: 8px;
+}
+
+.submenu {
+    background-color: cadetblue;
+    padding: 8px;
+    display: none;
+    position: fixed;
+}
+
+.submenu a {
+    color: white;
+}
+
+.menu_principal > li:hover .submenu {
+    display: block;
+} 

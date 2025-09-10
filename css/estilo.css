@@ -1,9 +1,12 @@
+@import url(form.css);
+
 @font-face {
     font-family: "MinhaFonte";
     font-style: normal;
     font-weight: 400;
     src: url('../css/font/Festive-Regular.ttf');
 }
+
 table {
     border-width: 1px;
     border-style: solid;
@@ -17,10 +20,11 @@ td, th {
     border : 1px solid black;
     padding: 10px;
 }
-
+/*
 li {
     color : red;
 }
+    */
 #margem_espaco {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -62,3 +66,41 @@ footer {
   'opsz' 24
 }
 
+ul > li:first-child {
+    color: red
+}
+
+    li:last-child {
+   background-color: silver;
+}
+
+/*table tr:nth-child(3) { */
+/*table tr:nth-child(even) { */
+/*table tr:nth-child(odd) {*/
+table tr:nth-child(3n) {
+   background-color: silver;
+}
+
+table tr:hover {
+    background-color: bisque;
+    font-style: italic;
+}
+
+.botao {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: green;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.botao:hover {
+    text-decoration: underline;
+    background-color: darkgreen;
+}
+
+.botao:active {
+    color: red;
+}
