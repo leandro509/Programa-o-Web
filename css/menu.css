@@ -1,7 +1,6 @@
 nav {
     background-color: aqua;
     padding: 10px;
-
 }
 
 menu {
@@ -11,12 +10,11 @@ menu {
 
 menu li {
     list-style: none;
-    display: inline-block;
 }
 
 menu a {
     text-decoration: none;
-    color: white;
+    color: gray;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
 }
@@ -43,4 +41,4 @@ menu a:hover {
 
 .menu_principal > li:hover .submenu {
     display: block;
-} 
+}

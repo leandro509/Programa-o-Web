@@ -36,6 +36,7 @@
             background-color: red;
             width: 400px;
             height: 200px;
+
             position: relative;
         }
 
@@ -48,6 +49,19 @@
             top: 30px;
             left: 30px;
         }
+
+        .transicao {
+            width: 200px;
+            height: 100;
+            background-color: yellow;
+            
+            transition: width 1s ease-in-out, height 1s ease-in-out;
+        }
+
+        .transicao:hover {
+            width: 300px;
+            height: 200px;
+        }
     </style>
 </head>
 <body>
@@ -57,17 +71,18 @@
     <nav>
         <menu class="menu_principal">
             <li><a href="">Opção 1</a></li><li>
-            <li><a href="">Opção 2</a></li>
+            <li><a href="">Opção 2</a>
             <menu class="submenu">
                  <li><a href="">Opção 1.1</a></li>
                  <li><a href="">Opção 2.1</a></li>
             </menu>
             </li>
-            <li><a href="">Opção 3</a></li>
+            <li><a href="">Opção 3</a>
             <menu class="submenu">
                 <li><a href="">Opção 3.1</a></li>
                 <li><a href="">Opção 3.2</a></li>
             </menu>
+            </li>
         </menu>
     </nav>
     <main>
@@ -84,6 +99,9 @@
                 Div filho
             </div>
         </div>
+        <p>
+        <div class="transicao"></div>
+        </p>
     </main>
     <footer>
         Rodapé da página

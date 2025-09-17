@@ -1,10 +1,10 @@
-@import url(form.css);
+@import "form.css";
 
 @font-face {
-    font-family: "MinhaFonte";
+    font-family: 'MinhaFonte';
     font-style: normal;
     font-weight: 400;
-    src: url('../css/font/Festive-Regular.ttf');
+    src: url('../font/Festive-Regular.ttf');
 }
 
 table {
@@ -17,19 +17,20 @@ table {
 }
 
 td, th {
-    border : 1px solid black;
+    border: 1px solid black;
     padding: 10px;
 }
+
 /*
 li {
-    color : red;
+    color: red;
 }
-    */
+*/
+
 #margem_espaco {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
 
 .tamanho_fonte {
     font-size: 1.2em;
@@ -48,37 +49,30 @@ header {
     padding: 10px;
     background-color: skyblue;
 }
+
 footer {
     font-family: 'MinhaFonte';
     font-weight: bold;
     background-color: black;
     color: white;
     text-align: center;
-    font-size: 0.8em;
     padding: 5px;
-}
-
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+    font-size: 0.8em;
 }
 
 ul > li:first-child {
-    color: red
+    color: red;
 }
 
-    li:last-child {
-   background-color: silver;
+ul li:last-child, ol li:last-child {
+    background-color: silver;
 }
 
-/*table tr:nth-child(3) { */
-/*table tr:nth-child(even) { */
+/*table tr:nth-child(3) {*/
+/*table tr:nth-child(even) {*/
 /*table tr:nth-child(odd) {*/
 table tr:nth-child(3n) {
-   background-color: silver;
+    background-color: silver;
 }
 
 table tr:hover {

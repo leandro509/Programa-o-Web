@@ -1,0 +1,20 @@
+
+$cor: blue;
+
+p {
+    background-color: blue;
+}
+
+@mixin destaque {
+    font-size: 1.3em;
+    color: red;
+}
+
+p {
+    padding-left: 15px;
+    @include destaque;
+}
+
+button {
+    @include destaque;
+}
