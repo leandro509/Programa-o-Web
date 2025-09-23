@@ -1,0 +1,39 @@
+.primeira_li {
+    font-size: 2em;
+}
+
+.ultima_li {
+    font-size: 0.8em;
+}
+
+.div_lista :hover {
+    background-color: yellow;
+}
+
+td, tr {
+    border: 1px solid black;
+    padding: 20px;
+}
+
+table {
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-collapse: collapse;
+}
+
+table tr:nth-child(odd) {
+    background-color: silver;
+}
+
+table tr :active {
+    background-color: red;
+}
+
+button {
+    position: relative;
+}
+
+
+
+
