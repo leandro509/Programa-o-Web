@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <style>
+        body{
+            margin: 0;
+        }
+        footer{
+            position: fixed;
+            bottom: 0;
+            width: 100vw;
+        }
+
+        main{
+            margin-bottom: 50px;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+        }
+
+        .position_relative {
+            border: 1px solid black;
+            position: relative;
+            left: 30px;
+            top: -30px;
+        }
+
+        .div_pai {
+            background-color: red;
+            width: 400px;
+            height: 200px;
+
+            position: relative;
+        }
+
+        .div_filho {
+            background-color: green;
+            width: 200px;
+            height: 100px;
+
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
+
+        .transicao {
+            width: 200px;
+            height: 100;
+            background-color: yellow;
+            
+            transition: width 1s ease-in-out, height 1s ease-in-out;
+        }
+
+        .transicao:hover {
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <header class="fascinate-regular">
+        Cabeçalho da página
+    </header>
+    <nav>
+        <menu class="menu_principal">
+            <li><a href="">Opção 1</a></li><li>
+            <li><a href="">Opção 2</a>
+            <menu class="submenu">
+                 <li><a href="">Opção 1.1</a></li>
+                 <li><a href="">Opção 2.1</a></li>
+            </menu>
+            </li>
+            <li><a href="">Opção 3</a>
+            <menu class="submenu">
+                <li><a href="">Opção 3.1</a></li>
+                <li><a href="">Opção 3.2</a></li>
+            </menu>
+            </li>
+        </menu>
+    </nav>
+    <main>
+        Menu principal
+        <p style="overflow: auto;">
+            <img src="imagens/imagem1.jpg" alt="">
+        </p>
+        <div class="position_relative">
+            Conteúdo da div
+        </div>
+        <div class="div_pai">
+            Div pai
+            <div class="div_filho">
+                Div filho
+            </div>
+        </div>
+        <p>
+        <div class="transicao"></div>
+        </p>
+    </main>
+    <footer>
+        Rodapé da página
+    </footer>
+</body>
+</html>

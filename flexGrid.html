@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex / Grid</title>
+    <style>
+        /*media query */ 
+
+        @media screen and (max-width: 425px) {
+            .flex-container {
+                flex-direction: column;
+            }
+        }
+
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .flex-container {
+            background-color: green;
+            display: flex;
+            /*flex-direction: column;*/
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            /*align-content: center;*/
+            /*height: 75vh;*/
+            /*align-items: flex-end;*/
+        }
+
+        .flex-container > div {
+            background-color: silver;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .grid-container {
+            background-color: blue;
+            display: grid;
+            /*grid-template-columns: auto auto auto;*/
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .grid-container > div {
+            background-color: silver;
+            padding: 10px;
+            text-align: center;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="imagens/15766.png" alt="">
+    </nav>
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+    <div class="grid-container">
+        <div style="grid-column: 1 / span 2;">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div style="grid-row: 2 / span 2; grid-column: 2;">4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+</body>
+</html>

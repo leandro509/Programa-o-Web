@@ -1,0 +1,33 @@
+ header {
+    text-align: center;
+    width: 100%;
+    font-size: larger;
+    background-color: lightblue;
+}
+td, tr {
+    border: 1px solid black;
+    width: 30px;
+    padding: 20px;
+}
+
+table {
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-collapse: collapse;
+}
+
+.header_p2 {
+    padding: 5px;
+    text-align: left;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    background-color: lightgray;
+}
+
+.cadastrar_btn, .limpar_btn {
+    background-color: green;
+    color: white;
+}
+
