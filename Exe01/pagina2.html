@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Exercício HTML - parte 2</title>
+</head>
+<body>
+    <header class="header_p2">
+        <form action="#" method="get">
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" minlength="4">
+        <p>
+            <label for="sobrenome">Sobrenome: </label>
+            <input type="text" name="sorbrenome" minlength="4">
+        </p>
+        <label for="nascimento">Data de nascimento: </label>
+        <input type="date">
+        <p></p>
+        <label for="campoRb">Sexo: </label>
+        <input type="radio" name="sexo" id="sexo1" value="Masculino">
+        <label for="sexo1">Masculino</label>
+        <input type="radio" name="sexo" id="sexo2" value="Feminino">
+        <label for="sexo2">Feminino</label>
+        <p></p>
+        <label for="endereco">Endereço : </label>
+        <input type="text" name="endereco" minlength="10" maxlength="50">
+        <p></p>
+        <label for="email">Email: </label>
+        <input type="email" minlength="5">
+        <p></p>
+        <label for="senha"> Senha: </label>
+        <input type="password" name="senha" required minlength="8">
+        <br><input class="cadastrar_btn" type="submit" value="Cadastrar"> <input class="limpar_btn" type="reset" value="Limpar">
+        </form>
+    </header>
+</body>
+</html>
