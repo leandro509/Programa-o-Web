@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Javascript</title>
+    <style>
+        .classe1 {
+            background-color: yellow;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.25em;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        //javascript aqui dentro
+        x = 1;
+        y = 2;
+        flag = true;
+        cidade = 'Blumenau';
+
+        z = x + y;
+        z++;
+        z += 3;
+        /*
+        Operadores Aritmeticos
+        + * - =
+        ** exponenciacao
+        % resto da divisao
+        ++ incrementa -- decrementa
+        +=
+        -=
+        *=
+        /=
+        **=
+        %= 
+        */
+
+        if (x >= y) {
+            console.log('x é o maior ou igual a y');
+        } else {
+            console.log('x é menor que y');
+        }
+
+        y = '1';
+        if (x == y) {
+            console.log("x é igual a y");
+        } else {
+            console.log("x é diferente de y");
+        }
+
+        if (x === y) {
+            console.log('x e y tem o mesmo valor e sao do mesmo tipo');
+        } else {
+            console.log('sao diferentes ou sao de tipos diferentes');
+        }
+
+        /*
+        Operadores de comparação
+        ==   valores iguais
+        ===  valores e tipos iguais
+        !=   diferente
+        !==  valores e tipos diferentes
+        > < >= <=
+
+        Operadores logicos
+        && AND
+        || OR
+        !  NOT
+        */
+
+        switch (z) {
+            case 1:
+                console.log('z é igual a 1');
+                break;
+            case 2:
+                console.log('z é igual a 2');
+                break;
+            default:
+                console.log('z é maior que 2');
+
+        }
+
+        for (let i = 0; i < cidade.length; i++) {
+            console.log(cidade[i]);
+        }
+        cont = 0;
+        while (cont < cidade.length) {
+            console.log(cidade[cont]);
+            cont++;
+        }
+
+        dataHoje = new Date();
+
+        //var varInterna = 'Oi';
+        function funcao() {
+            var varInterna = 0;
+            console.log(varInterna + ' ->Função chamada');
+        }
+
+        funcao();
+
+        const constante = 'Não muda!';
+
+        var vfuncao = funcao;
+
+        function soma(pParam1, pParam2) {
+            return pParam1 + pParam2;
+        }
+
+        function somaSubtrai(pParam1, pParam2) {
+            return pParam1 - pParam2;
+        }
+
+        console.log('A soma é ' + soma(1, 2));
+        console.log('A subtração é ' + somaSubtrai(3, 2))
+
+        function calcula(pParam1, pParam2, pFuncao) {
+            return pFuncao(pParam1, pParam2);
+        }
+
+        console.log('A soma é ' + calcula(1, 2, soma));
+        console.log('A subtração é ' + calcula(3, 2, somaSubtrai));
+
+        console.log('A multiplicação é ' + calcula(3, 2, (pParam1, pParam2) => { return pParam1 * pParam2; }))
+
+        function alteraMensagem(pTexto) {
+            document.getElementById('mensagem').innerHTML = pTexto;
+        }
+
+    </script>
+    <div id="mensagem"></div>
+    <div>
+        Página renderizada
+    </div>
+    <div>
+        <input type="text" id="texto">
+        <br>
+        <button onclick="alteraMensagem('Texto novo na div')">Altera Mensagem</button>
+        <button onclick="alteraMensagem(document.getElementById('texto').value)">Alterar mensagem(input)</button>
+        <br>
+        <button onclick="alteraCorFundo()">Altera cor de fundo</button>
+        <button onclick="ativaClasse1()">Ativa .classe1</button>
+    </div>
+</body>
+<script>
+    document.getElementById('mensagem').innerHTML = 'olá, mundo!';
+</script>
+<script src="js/funcoes.js"></script>
+</html>
