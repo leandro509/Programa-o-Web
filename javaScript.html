@@ -11,6 +11,13 @@
             font-family: 'Courier New', Courier, monospace;
             font-size: 1.25em;
         }
+
+        .classe2 {
+            border: 1px solid red;
+            font-weight: bold;
+            color: brown;
+            /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/   
+        }
     </style>
 </head>
 
@@ -144,7 +151,29 @@
         <br>
         <button onclick="alteraCorFundo()">Altera cor de fundo</button>
         <button onclick="ativaClasse1()">Ativa .classe1</button>
+        <button onclick="ativaClasse2()">Ativa .classe2</button>
+        <br>
+        <button onclick="removeClasse1()">Remove .classe1</button>
+        <button onclick="toggleClasse2()">Toggle .classe2</button>
     </div>
+    <div>
+        <button id="fazNada">Faz nada</button>
+        <button onclick="adicionaEvento()">Adiciona evento</button>
+    </div>
+    <p>
+        <h4>Agenda de tarefas</h4>
+        <input type="text" id="tarefa" placeholder="Adicionar tarefa">
+        <button onclick="adicionarTarefa()">Adicionar tarefa</button>
+        <button onclick="adicionarNoInicio()">Adicionar no início</button>
+        <button onclick="removerItem()">Remover Item</button>
+        <ul id="listaTarefas"></ul>
+    </p>
+    <p>
+        <button onclick="armazenaLS()">Armazena Local Storage</button>
+        <button onclick="armazenaSS()">Armazena Session Storage</button>
+        <button onclick="infoLS()">Mostra info Local Storage</button>
+        <button onclick="localStorage.removeItem('infoLS')">Apaga info Local Storage</button>
+    </p>
 </body>
 <script>
     document.getElementById('mensagem').innerHTML = 'olá, mundo!';
