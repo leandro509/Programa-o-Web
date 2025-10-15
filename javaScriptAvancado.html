@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScrpit Avançado</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+    <script src="/js/classes.js"></script>
+</head>
+
+<body>
+    <main>
+        <section>
+            <table id="tabela">
+                <tr>
+                    <td>Col1 Lin1</td>
+                    <td>Col2 Lin1</td>
+                    <td>Col3 Lin1</td>
+                    <td>Col4 Lin1</td>
+                </tr>
+            </table>
+            <p>
+                <button onclick="insLinha()">Cria linha</button>
+                <button onclick="delLinha()">Remove linha</button>
+            </p>
+        </section>
+        <div id="mensagem"></div>
+    </main>
+    <script>
+        function insLinha() {
+            var vTabela = document.getElementById('tabela');
+
+            var vLinha = vTabela.insertRow();
+            var vTD1 = vLinha.insertCell();
+            var vTD2 = vLinha.insertCell();
+            var vTD3 = vLinha.insertCell();
+            var vTD4 = vLinha.insertCell();
+
+            vTD1.innerHTML = 'Col1 linNova';
+            vTD2.innerHTML = 'Col2 linNova';
+            vTD3.innerHTML = 'Col3 linNova';
+            vTD4.innerHTML = 'Col4 linNova';
+        }
+
+        function delLinha() {
+            document.getElementById('tabela').deleteRow(-1);
+        }
+
+        var vPessoa = new Pessoa('Marcos', 'Blumenau');
+        console.log(vPessoa.mostrarPessoa());
+
+        var vAluno = new Aluno('Joao', 'Gaspar','BCC');
+        console.log(vAluno.mostrarCompleto());
+
+        var vProfessor = new Professor('Aurélio', 'Ilhota', 'DSC');
+        console.log(vProfessor.mostrarCompleto());
+
+        /*
+        function mostrarHora() {
+            document.getElementById('mensagem').innerHTML = new Date();
+        }
+        setInterval(mostrarHora, 1000);
+        */
+
+        setInterval(
+            () => document.getElementById('mensagem').innerHTML = new Date(), 1000  
+        );
+
+        var vetor1 = [1, 2, 3, 4];
+        /*
+        function mostrarVetor(pValor, pInt) {
+            console.log('vetor1[' + pInt + '] - > '   +pValor);
+        }
+        vetor1.forEach(mostrarVetor);
+        */
+        vetor1.forEach(
+            (pValor, pInd) => console.log('vetor1[' + pInd + '] - > '   +pValor)
+        );
+
+        var vetor2 = [];
+        vetor2 = vetor1.map(
+            (pValor) => pValor * 2
+        );
+
+        vetor2.forEach(
+            (pValor, pInd) => console.log('vetor2[' + pInd + '] - > '   +pValor)
+        );
+
+        //Destructuring
+        /*
+        var vPost1 = vetor1[0];
+        var vPost2 = vetor1[1];
+        var vPost3 = vetor1[2];
+        var vPost4 = vetor1[3];
+        */
+        
+        var [vPos1, vPos2, vPos3, vPos4] = vetor1;
+        var {nome, cidade} = vPessoa;
+
+        function fData (pData) {
+            return [pData.getDate(), pData.getMonth()+1, pData.getFullYear() ];
+        }
+
+        var [vDia, vMes, vAno] = fData(new Date());
+
+        //Operador spread
+        var vetor3 = [...vetor1, ...vetor2];
+
+        var vPessoa2 = {...vAluno, ...vProfessor};
+        var vPessoa3 = {...vProfessor, ...vetor1};
+
+        //Combinando Destructuring com SPREAD
+        var [vPos1, vPos2, ...vetSobra] = vetor3;
+
+        //Operador ternario / Ternary operator
+        var vNumero = 5;
+        console.log(
+            (vNumero % 2 === 0 ) ? ' é par ' : ' é ímpar '
+        );
+
+        (vNumero % 2 === 0 ) ? alert('é par') : alert('é ímpar');
+     </script>
+     <script type="module">
+            //Para cada export precisa de um import
+            import { Usuario } from './js/modulo1.js';
+            import { mostrarSoma } from './js/modulo2.js';
+
+            //var vPessoa2 = new Pessoa2('Marcos');
+            var vUsuario =  new Usuario('Marcos', 'USER');   
+
+            //console.log(vUsuario.nome + ' - ' + vUsuario.categoria);
+            //Template Strings
+            console.log(`${vUsuario.nome} - ${vUsuario.categoria}`);
+            mostrarSoma(3,1);
+     </script>
+</body>
+
+</html>
