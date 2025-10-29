@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+<body>
+    <script>
+        var vPromise = new Promise(
+            (pResolve, pReject) => {
+                console.log('Vai jogar o dado');
+                var vDado = Math.floor((Math.random() * 6) + 1);
+                if (vDado == 6) {
+                    //Cumpriu a promessa
+                    pResolve(vDado);
+                } else {
+                    //Quebrou a promessa
+                    pReject(vDado);
+                }
+            }
+        );
+
+        /*function fDeuCerto(pNumero) {
+            console.log('Deu certo! -> '+pNumero);
+        }
+
+        function fDeuErrado(pNumero) {
+            console.log('Deu errado! -> '+pNumero);
+        }*/
+
+        console.log('Vai conferir a Promise');
+        vPromise
+            .then(//fDeuCerto
+                (pNumero) => console.log('Deu certo! -> '+pNumero)
+            )
+            .catch(//fDeuErrado
+                (pNumero) => console.log('Deu errado! -> '+pNumero)
+            );
+
+        function chamaAPI(pMsgRetorno, pTempoEspera) {
+            return new Promise(
+                (pResolve) => {
+                    setTimeout(
+                        () => pResolve(pMsgRetorno)
+                        , pTempoEspera
+                    );
+                }
+            );
+        }
+
+        async function chamaAPIs() {
+            console.log('Entrou na função');
+
+            var vRetorno1 = await chamaAPI('Completou chamada 1', 1000);
+            console.log(vRetorno1);
+
+            var vRetorno2 = await chamaAPI('Completou chamada 2', 2000);
+            console.log(vRetorno2);
+
+            var vRetorno3 = await chamaAPI('Completou chamada 3', 1500);
+            console.log(vRetorno3);
+
+            return "Saindo da função";
+        }
+
+        chamaAPIs()
+            .then((pRetorno) => console.log(pRetorno) );
+    </script>
+</body>
+</html>
