@@ -1,2 +1,45 @@
 
 <h4>Cadastro</h4>
+<div>
+    {{vPessoa.idPessoa+ ' - ' + vPessoa.nmPessoa + ' - ' + vPessoa.nmCidade + ' - ' +vPessoa.vlSalario}}
+</div>
+<div>
+    <input type="text" [(ngModel)] = "vPessoa.nmPessoa">
+    <br>
+    <input type="text" [(ngModel)] = "vPessoa.nmCidade">
+    <br>
+    <input type="number"  placeholder="% de aumento de sálario"
+    salário [(ngModel)] = "vPcAumento">
+    <br>
+    <button (click)="calcularAumento()" >Aplicar aumento</button>
+</div>
+<div>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Cidade</th>
+            <th>Salário</th>
+        </tr>
+        @for (pessoa of vetPessoas; track $index) {
+             <tr>
+            <td>{{$index + ' - ' + pessoa.idPessoa}}</td>
+            <td>{{pessoa.nmPessoa}}</td>
+            <td>{{pessoa.nmCidade}}</td>
+            @if (pessoa.vlSalario >= 8000) {
+                <td style="background-color: lightblue;">
+                    {{pessoa.vlSalario}}
+                </td>
+            }@else {
+                <td style="background-color: lightcoral;">
+                    {{pessoa.vlSalario}}
+                </td>
+            }
+            <td>
+                <button (click)="editaPessoa(pessoa)" >Altera pessoa</button>
+            </td>
+        </tr>
+        }
+       
+    </table>
+</div>

@@ -1,0 +1,25 @@
+header {
+    background-color: black;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: white;
+}
+
+body {
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container_entrada_dados {
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.container_entrada_dados .container_btns {
+    display: flex;
+    flex-direction: column;
+}
