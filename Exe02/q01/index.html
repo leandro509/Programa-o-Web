@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculador Web</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
     <header>
-            <h1>Calculador Web</h1>
+        <div></div>
+        <h1>Calculador Web</h1>
+        <img id="next_pg" onclick="proxPg()" src="images/arrow_right_alt_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" >
     </header>
     <main>
         <div class="container_entrada_dados">
-            <div><input type="number" name="numero1" id="num1">
+            <div class="container_inputs"><input type="number" name="numero1" id="num1">
                 <input type="number" name="numero2" id="num2">
             </div>
-            <div class="containter_btns">
-                <button onclick="calcularSoma">Calcular</button>
-                <button>Maior número</button>
-            </div>  
+            <div class="container_btns">
+                <button id="btn_calcular" onclick="calcularSoma()">Calcular</button>
+                <div id="calc_result"></div>
+                <button id="btn_maior" onclick="fazerComparacao()">Maior número</button>
+                <div id="compareValue"></div>
+            </div>
         </div>
     </main>
 </body>
 <script src="index.js"></script>
+
 </html>

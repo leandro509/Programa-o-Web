@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copiador de texto</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header>
+        <img id="back_pg" onclick="voltarPg()" src="images/arrow_back_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg">
+        <h1>Copiadora de texto</h1>
+        <img id="next_pg" onclick="proxPg()" src="images/arrow_right_alt_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg">
+    </header>
+    <main>
+        <div class="container_entrada_dados">
+            <div class="container_inputs">
+                <input id="textArea" type="text" placeholder="Digite algo">
+                <div id="textoDigitado"></div>
+            </div>
+            <div class="container_btns">
+                <button id="mostrar_info_btn" onclick="tamFrase()">Mostrar info</button>
+                <div id="info_result"></div>
+            </div>
+        </div>
+    </main>
+</body>
+<script>
+    const input = document.querySelector('#textArea');
+    const texto = document.getElementById('textoDigitado');
+
+    input.addEventListener("input", updateValue);
+
+    function updateValue(e) {
+        texto.innerHTML = e.target.value;
+    }
+
+    function tamFrase() {
+        const btn = document.getElementById('mostrar_info_btn');
+
+        btn.addEventListener("click", () => {
+            mostrarTamanho();
+        });
+    }
+
+    function mostrarTamanho() {
+        const tamanho = texto.innerText.length;
+        const tamanhoTexto = document.getElementById('info_result');
+        tamanhoTexto.innerHTML = "O tamanho atual do campo é de: " + tamanho;
+    }
+
+    function proxPg() {
+        const btn = document.getElementById('next_pg');
+
+        btn.addEventListener("click", () => {
+            window.location.href = "pag3.html ";
+        });
+
+    }
+
+    function voltarPg() {
+        const btn = document.getElementById('back_pg');
+
+        btn.addEventListener("click", () => {
+            window.location.href = "index.html ";
+        });
+
+    }
+
+</script>
+
+</html>

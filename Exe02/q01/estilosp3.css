@@ -17,61 +17,18 @@ body {
 }
 
 main {
-    width: 400px;
-    height: 400px;
-    margin: 100px auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: lightskyblue;
-    border-radius: 8px;
-}
-
-#num1,
-#num2 {
-    width: 30px;
-    height: 30px;
-    margin: 5px;
-}
-
-
-.container_entrada_dados {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-content: center;
-    gap: 10px;
 }
 
-.container_btns {
+.container_tabela {
     margin-top: 10px;
     width: 100px;
     height: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-#btn_maior {
-    margin-top: 5px;
-}
-
-#calc_result {
-    margin-top: 2px;
-    font-size: small;
-}
-
-#compareValue {
-    margin-top: 2px;
-    font-size: small;
-}
-
-#next_pg {
-    margin-right: 5px;
-}
-
-#next_pg:hover {
-    cursor: pointer;
 }
 
 #back_pg {
@@ -93,8 +50,13 @@ table {
     border-collapse: collapse;
 }
 
-td, tr {
+td,
+tr {
     border: 1px solid black;
     width: 30px;
     padding: 20px;
+}
+
+#btn_addTable {
+    margin-top: 5px;
 }

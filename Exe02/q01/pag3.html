@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Tabela</title>
+    <link rel="stylesheet" href="estilosp3.css">
+</head>
+
+<body>
+    <header>
+        <img id="back_pg" onclick="voltarPg()" src="images/arrow_back_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg">
+        <h1>Adicionar Tabela</h1>
+        <div></div>
+    </header>
+    <main>
+        <div class="container_tabela">
+            <table id="table_id">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <button id="btn_addTable">Adicionar Tabela</button>
+        </div>
+    </main>
+</body>
+<script>
+    function voltarPg() {
+        const btn = document.getElementById('back_pg');
+        btn.addEventListener("click", () => {
+            window.location.href = "pag2.html ";
+        });
+    }
+
+    document.getElementById('btn_addTable').addEventListener("click", adicionarTabela);
+
+    function adicionarTabela() {
+            const tabela = document.getElementById('table_id');
+            const linhaTabela = tabela.insertRow();
+            for(let i = 0; i < 3; i++) {
+                linhaTabela.insertCell();
+            }
+            
+    }
+</script>
+
+</html>
