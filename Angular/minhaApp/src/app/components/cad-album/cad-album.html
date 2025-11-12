@@ -1,0 +1,59 @@
+<h4>Cadastro álbuns</h4>
+
+<div>
+    <button (click)="buscaAlbuns()"> Carrega Albuns</button>
+</div>
+
+<p>
+    <input type="number"[(ngModel)] = "vAlbum.id">
+    <button (click)="buscaAlbum()">Busca álbum</button>
+    <button (click)="mostraFotos()">Busca fotos</button><br>
+    <input type="number"[(ngModel)] = "vAlbum.userId"><br>
+    <input type="text"[(ngModel)] = "vAlbum.title" size="80">
+    <br>
+    <button (click)="alteraAlbum()">Salvar Alteracões</button>
+    <button (click)="insereAlbum()  ">Insere álbum</button>
+    <button (click)="excluirAlbum()">Exclui álbum</button>
+</p>
+<p>
+    {{vAlbumEdit.id+ ' - ' + vAlbumEdit.userId + ' - ' + vAlbumEdit.title}}
+</p>
+
+<div>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>AlbumId</th>
+            <th>Title</th>
+            <th>Url</th>
+            <th>ThumbnailUrl</th>
+        </tr>
+        @for (photo of vetPhotos; track $index) {
+            <tr>
+                <td>{{photo.id}}</td>
+                <td>{{photo.albumId}}</td>
+                <td>{{photo.title}}</td>
+                <td>{{photo.url}}</td>
+                <td> <img src="{{photo.thumbnailUrl}}" alt="Imagem foto {{photo.id}}"></td>
+            </tr>
+        }
+    </table>
+</div>
+
+<div>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>User Id</th>
+            <th>Titles</th>
+        </tr>
+        @for (album of vetAlbuns; track $index) {
+            <tr>
+                <td>{{album.id}}</td>
+                <td>{{album.userId}}</td>
+                <td>{{album.title}}</td>
+            </tr>
+        }
+    </table>
+</div>
+<p>&nbsp;</p>
